@@ -5,7 +5,6 @@ import project from '../aurelia.json';
 import build from './build';
 import {CLIOptions} from 'aurelia-cli';
 import nodemon from 'gulp-nodemon';
-import proxy from 'http-proxy-middleware';
 
 function log(message) {
   console.log(message); //eslint-disable-line no-console
@@ -28,13 +27,11 @@ let serve = gulp.series(
       open: false,
       port: 9000,
       logLevel: 'silent',
-      server: {
-        baseDir: ['public']
+      proxy: {
+        target: "http://localhost:1337",
+        ws: true
       },
-      middleware: [
-        historyApiFallback(),
-        proxy('/api', {target: 'http://localhost:1337', ws: true})
-      ]
+      middleware: [historyApiFallback()]
     }, function(err, bs) {
       if (err) console.error(err);
       let urls = bs.options.get('urls').toJS();

@@ -51,7 +51,6 @@
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.0.0-alpha",
-    "http-proxy-middleware": "^0.17.2",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-babel-preprocessor": "^6.0.1",
