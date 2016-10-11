@@ -1,25 +1,28 @@
 # sails-aurelia-boilerplate
 Aurelia and Sails.js joined together in one project.
 
-Uses Aurelia CLI with some additional modifications to gulp scripts to
-run and build the project.
+Uses [Aurelia CLI](https://github.com/aurelia/cli) with some 
+additional modifications to gulp scripts to run and build the project.
 
 ## Installing
-```npm install -g aurelia-cli```
-```npm install -g sails```
-```npm install ```
+```
+npm install -g aurelia-cli
+npm install -g sails
+npm install
+```
 
 ## Running
 ```au run```
-Or with live reload:
+Or with BrowserSync (Aurelia) and nodemon (Sails.js):
 ```au run --watch```
 
 ## Building
-```au build ```
+```au build```
 
 ## Generating scaffolds
 
-You can use sails CLI tool to generate anything sails related:
+You can use [Sails.js](http://sailsjs.org/) CLI tool to generate 
+anything sails related:
 ```sails generate api Book ```
 
 or Aurelia CLI for anything Aurelia related:
